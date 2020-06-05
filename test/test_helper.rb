@@ -3,4 +3,6 @@ SimpleCov.start
 
 require 'minitest/autorun'     # Sets up minitest
 require 'minitest/pride'
-                               # You could require other shared gems here, too
+require 'mocha/minitest'
+require "./lib/enigma"
+require 'date'
