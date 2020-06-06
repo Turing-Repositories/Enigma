@@ -14,11 +14,11 @@ class KeyTest < Minitest::Test
   end
 
   def test_it_can_generate_random_key_numbers
-    # look up mocks and stubs
     key = Key.new
 
-    puts key.generate_key_set_numbers
-    puts key.key_set_numbers
+    key.stubs(:rand).returns('43520')
+
+    assert_equal '43520', key.random_key_numbers
   end
 
   def test_it_can_find_key_set
