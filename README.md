@@ -46,4 +46,12 @@
 - .rjust can be used to pass arguments that allow you to add a character if it is under a certain length.
 - This allows minitest to not populate it with a random number but a predictive number which allows the test to pass.
 - The above actually does not matter if you remove the extra letters in our stubs. If you use ``` key.stubs(:random_number).returns('43520')```  you will encounter the above error and will need to use the above fix to get by. However, if you use key.stubs(:rand).returns('43520'), you will avoid the error all together.
--
+- Created offset class and passed all tests
+
+**Next Steps**
+- Encrypt: Add keys and offsets together. Shift characters
+- Decrypt: .reverse of encrypt? 
+- Shift: Should this even be a class?
+- Enigma:
+- Command Line Interface:
+- Cracking:
