@@ -13,4 +13,13 @@ class OffsetTest < Minitest::Test
 
     assert_equal date, offset.todays_date
   end
+
+  def test_it_can_find_last_four_digits_of_squared_date
+    date = Date.today.strftime("%d%m%y")
+    offset = Offset.new
+    last_4_digits_of_squared_date = (date.to_i ** 2).to_s.slice(-4..-1)
+
+    assert_equal last_4_digits_of_squared_date, offset.date_squared
+  end
+
 end
