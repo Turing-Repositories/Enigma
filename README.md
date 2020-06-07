@@ -50,8 +50,18 @@
 
 **Next Steps**
 - Encrypt: Add keys and offsets together. Shift characters
-- Decrypt: .reverse of encrypt? 
+- Decrypt: .reverse of encrypt?
 - Shift: Should this even be a class?
 - Enigma:
 - Command Line Interface:
 - Cracking:
+
+- Worked on encryption class. Was hard stuck on shift alphabet letter
+
+##### **6/7/2020**
+- Worked on getting shift alphabet to work. Started out being nested, but after looking into guard clauses wanted to try it out.
+- I see that the test is passing after loads of trial and error.
+- Was able to encrpyt message and pass tests
+- Finished up Encryption class
+
+- Create decryption class and see if we can decrypt the message. 
