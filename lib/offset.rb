@@ -1,7 +1,8 @@
-require "date"
-
 class Offset
-  attr_reader :date
+  def initialize
+    @offset_numbers = offset_numbers
+    @offest_numbers_hash = generate_offset_numbers
+  end
 
   def todays_date
     Date.today.strftime("%d%m%y")
@@ -23,5 +24,4 @@ class Offset
     offset[:D] = offset_numbers[3]
     offset
   end
-
 end
