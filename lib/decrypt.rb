@@ -11,6 +11,7 @@ class Decrypt
     @message = message
     @key = key
     @offset = offset
+    @decryption_result = ""
   end
 
   def decrypt_message(message, amount_of_shift)
@@ -22,6 +23,13 @@ class Decrypt
       decrypted_message += char
       end
     end
-    decrypted_message
+    @decryption_result += decrypted_message
+  end
+
+  def final_decryption
+    { decryption: @decryption_result,
+      key: @key,
+      date: todays_date
+    }
   end
 end
