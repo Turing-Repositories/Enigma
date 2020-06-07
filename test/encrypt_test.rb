@@ -70,4 +70,13 @@ class EncryptTest < Minitest::Test
     assert_equal expected2, encrypt.shift_alphabet_letter(12, shift2)
     assert_equal expected3, encrypt.shift_alphabet_letter(0, shift3)
   end
+
+  def test_it_can_encrypt_message
+    key = Key.new.generate_key_set_numbers
+    offset = Offset.new.generate_offset_numbers
+    encrypt = Encrypt.new('Hello World!', key, offset)
+    dummy_encryption_keys = {:A=>1, :B=>2, :C=>2, :D=>1}
+
+    assert_equal "ignmpbypsnf!", encrypt.encrypt_message("Hello World!", dummy_encryption_keys)
+  end
 end
