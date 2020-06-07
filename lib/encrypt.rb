@@ -10,6 +10,7 @@ class Encrypt
     @message = message
     @key = key
     @offset = offset
+    @encryption_result = ""
   end
 
   def find_encrpytion_keys(key = @key, offset = @offset)
@@ -39,6 +40,14 @@ class Encrypt
         encrypted_message += char
       end
     end
-    encrypted_message
+    @encryption_result += encrypted_message
   end
+
+  def final_encryption
+    { encryption: @encryption_result,
+      key: @key,
+      date: todays_date
+    }
+  end
+
 end
