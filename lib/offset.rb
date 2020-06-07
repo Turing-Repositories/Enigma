@@ -1,3 +1,4 @@
+require_relative 'reuseables'
 class Offset
   def initialize
     @offset_numbers = offset_numbers

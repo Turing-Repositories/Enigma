@@ -1,7 +1,9 @@
+require_relative 'reuseables'
 require_relative 'key'
 require_relative 'offset'
 
 class Encrypt
+  include Reuseables
   attr_reader :message
 
   def initialize(message, key, offset)
@@ -34,17 +36,6 @@ class Encrypt
     keys[:C] = numbers[2]
     keys[:D] = numbers[3]
     keys
-  end
-
-  def alphabet
-    ('a'..'z').to_a << ' '
-  end
-
-  def shift_alphabet_letter(index, amount_of_shift) #working, but not really sure why?
-    return alphabet.rotate(amount_of_shift[:A]) if index % 4 == 0
-    return alphabet.rotate(amount_of_shift[:B]) if index % 4 == 1
-    return alphabet.rotate(amount_of_shift[:C]) if index % 4 == 2
-    return alphabet.rotate(amount_of_shift[:D]) if index % 4 == 3
   end
 
   def format_message(message)

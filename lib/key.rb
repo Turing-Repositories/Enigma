@@ -1,4 +1,6 @@
+require_relative 'reuseables'
 class Key
+  include Reuseables
   attr_reader :key_set_numbers
 
   def initialize(key_set_numbers = random_key_numbers)
