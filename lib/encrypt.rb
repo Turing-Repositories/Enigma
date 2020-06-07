@@ -2,6 +2,7 @@ require_relative 'key'
 require_relative 'offset'
 
 class Encrypt
+
   def initialize
     @key = Key.new.generate_key_set_numbers
     @offset = Offset.new.generate_offset_numbers
@@ -14,6 +15,6 @@ class Encrypt
     offset.each_value { |v| offset_acc << v.to_i }
     keys = key_acc.zip(offset_acc).map { |x, y| x + y }
     keys
-    require "pry"; binding.pry
   end
+
 end
