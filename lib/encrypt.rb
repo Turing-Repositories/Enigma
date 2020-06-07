@@ -2,7 +2,6 @@ require_relative 'key'
 require_relative 'offset'
 
 class Encrypt
-
   def initialize
     @key = Key.new.generate_key_set_numbers
     @offset = Offset.new.generate_offset_numbers
@@ -25,4 +24,9 @@ class Encrypt
     keys[:D] = numbers[3]
     keys
   end
+
+  def alphabet
+    ("a".."z").to_a << " "
+  end
+
 end
