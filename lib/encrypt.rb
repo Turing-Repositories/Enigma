@@ -46,4 +46,20 @@ class Encrypt
     return alphabet.rotate(amount_of_shift[:C]) if index % 4 == 2
     return alphabet.rotate(amount_of_shift[:D]) if index % 4 == 3
   end
+
+  def format_message(message)
+    message.downcase
+  end
+
+  def encrypt_message(message, amount_of_shift)
+    encrypted_message = ''
+    format_message(message).each_char.with_index do |char, index|
+      if alphabet.include?(char)
+        encrypted_message += shift_alphabet_letter(index, amount_of_shift)[alphabet.index(char)]
+      else
+        encrypted_message += char
+      end
+    end
+    encrypted_message
+  end
 end
