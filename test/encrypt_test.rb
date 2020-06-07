@@ -13,4 +13,9 @@ class EncryptTest < Minitest::Test
     assert_instance_of Array, encrypt.find_encrpytion_keys
   end
 
+  def test_it_can_turn_encryption_keys_into_hash
+    encrypt = Encrypt.new
+
+    assert_instance_of Hash, encrypt.encrpytion_keys
+  end
 end

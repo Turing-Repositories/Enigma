@@ -17,4 +17,12 @@ class Encrypt
     keys
   end
 
+  def encrpytion_keys(numbers = find_encrpytion_keys)
+    keys = Hash.new
+    keys[:A] = numbers[0]
+    keys[:B] = numbers[1]
+    keys[:C] = numbers[2]
+    keys[:D] = numbers[3]
+    keys
+  end
 end
