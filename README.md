@@ -64,4 +64,8 @@
 - Was able to encrpyt message and pass tests
 - Finished up Encryption class
 
-- Create decryption class and see if we can decrypt the message. 
+- Create decryption class and see if we can decrypt the message.
+- Decrypt class is done and was able to decrpyt my message.
+- What will we need to add so that the keys are automatically passed instead of manually adding in the minus signs for decrypt?
+
+- Thinking that the shift and alphabet methods could be put in a module at some point. 
