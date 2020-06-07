@@ -12,14 +12,6 @@ class Encrypt
     @offset = offset
   end
 
-  def key
-    Key.new.generate_key_set_numbers
-  end
-
-  def offset
-    Offset.new.generate_offset_numbers
-  end
-
   def find_encrpytion_keys(key = @key, offset = @offset)
     key_acc = []
     key.each_value { |v| key_acc << v.to_i }
@@ -36,10 +28,6 @@ class Encrypt
     keys[:C] = numbers[2]
     keys[:D] = numbers[3]
     keys
-  end
-
-  def format_message(message)
-    message.downcase
   end
 
   def encrypt_message(message, amount_of_shift)

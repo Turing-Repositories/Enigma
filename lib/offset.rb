@@ -1,20 +1,9 @@
 require_relative 'reuseables'
 class Offset
+  include Reuseables
   def initialize
     @offset_numbers = offset_numbers
     @offest_numbers_hash = generate_offset_numbers
-  end
-
-  def todays_date
-    Date.today.strftime("%d%m%y")
-  end
-
-  def date_squared
-    (todays_date.to_i ** 2).to_s.slice(-4..-1) #grabs the numbers in the last 4 positions
-  end
-
-  def offset_numbers
-    date_squared
   end
 
   def generate_offset_numbers
