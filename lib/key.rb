@@ -7,7 +7,7 @@ class Key
   end
 
   def random_key_numbers #create a random 5 digit number
-    rand(0..99999).to_s
+    rand(0..99999).to_s.rjust(5,'0')
   end
 
   def generate_key_set_numbers
