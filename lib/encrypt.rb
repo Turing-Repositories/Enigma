@@ -2,9 +2,20 @@ require_relative 'key'
 require_relative 'offset'
 
 class Encrypt
-  def initialize
-    @key = Key.new.generate_key_set_numbers
-    @offset = Offset.new.generate_offset_numbers
+  attr_reader :message
+
+  def initialize(message, key, offset)
+    @message = message
+    @key = key
+    @offset = offset
+  end
+
+  def key
+    Key.new.generate_key_set_numbers
+  end
+
+  def offset
+    Offset.new.generate_offset_numbers
   end
 
   def find_encrpytion_keys(key = @key, offset = @offset)
