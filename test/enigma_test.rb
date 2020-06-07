@@ -8,8 +8,10 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_can_encrypt_message_with_key_and_date
-    skip
-    enigma.encrypt("hello world", "02715", "040895")
+    mock_message = mock('hello world')
+    mock_key = mock('02715')
+    mock_date = mock('040895')
+    enigma = Enigma.new(mock_message, mock_key, mock_date)
 
     expected = {
      encryption: "keder ohulw",

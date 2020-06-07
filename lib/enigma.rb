@@ -7,10 +7,15 @@ require_relative 'decrypt'
 class Enigma
   include Reuseables
 
-  def encrypt(message, key, date)
+  def encrypt(message, key = random_key_numbers, date = todays_date)
+    require "pry"; binding.pry
+    encrypter = Encrypt.new(message, key, date)
+    encrypter.final_encryption
   end
 
-  def decrypt(ciphertext, key, date)
+  def decrypt(message, key = offset_numbers, date = todays_date)
+    decrypter = Decrypt.new(message, key, date)
+    decrypter.final_decryption
   end
 
 end

@@ -63,8 +63,8 @@ class EncryptTest < Minitest::Test
     expected2 = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
     "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "a"]
 
-     expected3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
-      "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
+    expected3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
+    "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
 
     assert_equal expected1, encrypt.shift_alphabet_letter(1, shift)
     assert_equal expected2, encrypt.shift_alphabet_letter(12, shift2)
