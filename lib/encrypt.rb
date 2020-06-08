@@ -6,7 +6,8 @@ class Encrypt
   include Reuseables
   attr_reader :message
 
-  def initialize(message, key, offset)
+  def initialize(message, key = random_key_numbers, date = todays_date)
+    @date = date
     @message = message
     @key = key
     @offset = offset
@@ -46,7 +47,7 @@ class Encrypt
   def final_encryption
     { encryption: @encryption_result,
       key: @key,
-      date: todays_date
+      date: @date
     }
   end
 

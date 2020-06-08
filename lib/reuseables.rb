@@ -32,10 +32,6 @@ module Reuseables
     Offset.new.generate_offset_numbers
   end
 
-  def offset_numbers
-    date_squared
-  end
-
   # Date Info
   def todays_date
     Date.today.strftime('%d%m%y')

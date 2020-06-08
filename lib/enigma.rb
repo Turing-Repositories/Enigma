@@ -6,9 +6,12 @@ require_relative 'decrypt'
 
 class Enigma
   include Reuseables
+  attr_reader :date
+  def initialize
+    @date = date
+  end
 
   def encrypt(message, key = random_key_numbers, date = todays_date)
-    require "pry"; binding.pry
     encrypter = Encrypt.new(message, key, date)
     encrypter.final_encryption
   end

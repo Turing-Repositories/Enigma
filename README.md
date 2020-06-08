@@ -68,4 +68,10 @@
 - Decrypt class is done and was able to decrpyt my message.
 - What will we need to add so that the keys are automatically passed instead of manually adding in the minus signs for decrypt?
 
-- Thinking that the shift and alphabet methods could be put in a module at some point. 
+- Thinking that the shift and alphabet methods could be put in a module at some point.
+
+- Created a reuseables module.
+- Refactored all classes accordingly
+- Working on getting enigma class finished
+- Fix bug with date not populating correctly
+- Work on bug to get message working

@@ -1,7 +1,9 @@
 require_relative 'reuseables'
 class Offset
   include Reuseables
-  def initialize
+  attr_reader :offset_numbers
+
+  def initialize(offset_numbers = random_key_numbers)
     @offset_numbers = offset_numbers
     @offest_numbers_hash = generate_offset_numbers
   end

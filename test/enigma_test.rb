@@ -8,18 +8,17 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_can_encrypt_message_with_key_and_date
-    mock_message = mock('hello world')
-    mock_key = mock('02715')
-    mock_date = mock('040895')
-    enigma = Enigma.new(mock_message, mock_key, mock_date)
+    # mock_message = mock('hello world')
+    # mock_key = mock('02715')
+    # mock_date = mock('040895')
+    enigma = Enigma.new
 
     expected = {
      encryption: "keder ohulw",
      key: "02715",
      date: "040895"
     }
-
-    assert_equal expected, enigma.encrypt
+    assert_equal expected, enigma.encrypt('hello world', '02715', '040895')
   end
 
   def test_it_can_decrypt_message_with_key_and_date
