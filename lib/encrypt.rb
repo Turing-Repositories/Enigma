@@ -4,12 +4,13 @@ class Encrypt
   include Reuseables
   attr_reader :message
 
-  def initialize(message, key = random_key_numbers, date = todays_date)
+  def initialize(message, key, date)
     @message = message
     @key = key
     @date = date
     @offset = offset
     @result = ''
+    #@key_set_numbers =
   end
 
   def find_encrpytion_keys(key = @key, offset = @offset)
@@ -35,6 +36,8 @@ class Encrypt
     format_message(message).each_char.with_index do |char, index|
       if alphabet.include?(char)
         encrypted_message += shift_alphabet_letter(index, amount_of_shift)[alphabet.index(char)]
+        puts char
+        puts encrypted_message
       else
         encrypted_message += char
       end
@@ -44,7 +47,7 @@ class Encrypt
 
   def final_encryption
     { encryption: @result,
-      key: @key,
+      key: @key_set_numbers,
       date: @date
     }
   end

@@ -53,14 +53,14 @@ class EncryptTest < Minitest::Test
     date = Offset.new.generate_offset_numbers
     encrypt = Encrypt.new('Hello World!', key, date)
     shift = {:A=>2, :B=>2, :C=>2, :D=>2}
-    shift2 = {:A=>1, :B=>1, :C=>1, :D=>1}
+    shift2 = {:A=>3, :B=>27, :C=>12, :D=>11}
     shift3 = {:A=>0, :B=>1, :C=>1, :D=>1}
 
     expected1 = ["c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
     "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "a", "b"]
 
-    expected2 = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "a"]
+    expected2 = ["d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
+    "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "a", "b", "c"]
 
     expected3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
     "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
