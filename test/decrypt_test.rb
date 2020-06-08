@@ -1,7 +1,5 @@
 require './test/test_helper.rb'
-
 class DecryptTest < Minitest::Test
-
   def test_it_exists
     key = Key.new.generate_key_set_numbers
     offset = Offset.new.generate_offset_numbers
@@ -40,9 +38,7 @@ class DecryptTest < Minitest::Test
     key = Key.new.generate_key_set_numbers
     offset = Offset.new.generate_offset_numbers
     decrypt = Decrypt.new('Hello World!', key, offset)
-    dummy_decryption_keys = {:A=>-1, :B=>-2, :C=>-2, :D=>-1}
 
-    final_decryption = decrypt.decrypt_message('ignmpbypsnf!', dummy_decryption_keys)
     assert_instance_of Hash, decrypt.final_decryption
   end
 end
