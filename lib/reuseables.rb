@@ -19,7 +19,7 @@ module Reuseables
 
   # Key.rb
   def random_key_numbers
-    rand(0..99999).to_s.rjust(5,'0')
+    rand(0..99_999).to_s.rjust(5,'0')
   end
 
   def key
@@ -27,17 +27,16 @@ module Reuseables
   end
 
   # Offset.rb
-
   def offset
     Offset.new.generate_offset_numbers
   end
 
   # Date Info
-  def todays_date
-    Date.today.strftime('%d%m%y')
-  end
-
   def date_squared
     (todays_date.to_i**2).to_s.slice(-4..-1)
+  end
+
+  def todays_date
+    Date.today.strftime('%d%m%y')
   end
 end
