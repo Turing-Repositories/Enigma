@@ -1,7 +1,4 @@
 require_relative 'reuseables'
-require_relative 'key'
-require_relative 'offset'
-require_relative 'encrypt'
 
 class Decrypt
   include Reuseables
@@ -11,7 +8,7 @@ class Decrypt
     @message = message
     @key = key
     @offset = offset
-    @decryption_result = ""
+    @decryption_result = ''
   end
 
   def decrypt_message(message, amount_of_shift)
@@ -23,7 +20,7 @@ class Decrypt
       decrypted_message += char
       end
     end
-    @decryption_result += decrypted_message
+    @decryption_result = decrypted_message
   end
 
   def final_decryption

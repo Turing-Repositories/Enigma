@@ -80,11 +80,13 @@ class EncryptTest < Minitest::Test
   end
 
   def test_it_can_find_encryption_result
-    # date = Date.today.strftime('%d%m%y')
     key = Key.new.generate_key_set_numbers
     date = Offset.new.generate_offset_numbers
     encrypt = Encrypt.new('Hello World!', key, date)
-    assert_instance_of Hash, encrypt.final_encryption
+    dummy_encryption_keys = {:A=>1, :B=>2, :C=>2, :D=>1}
 
+    encrypt.encrypt_message("Hello World!", dummy_encryption_keys)
+
+    assert_instance_of Hash, encrypt.final_encryption
   end
 end

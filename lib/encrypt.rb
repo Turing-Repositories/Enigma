@@ -1,17 +1,15 @@
 require_relative 'reuseables'
-require_relative 'key'
-require_relative 'offset'
 
 class Encrypt
   include Reuseables
   attr_reader :message
 
   def initialize(message, key = random_key_numbers, date = todays_date)
-    @date = date
     @message = message
     @key = key
+    @date = date
     @offset = offset
-    @encryption_result = ""
+    @result = ''
   end
 
   def find_encrpytion_keys(key = @key, offset = @offset)
@@ -41,11 +39,11 @@ class Encrypt
         encrypted_message += char
       end
     end
-    @encryption_result += encrypted_message
+    @result = encrypted_message
   end
 
   def final_encryption
-    { encryption: @encryption_result,
+    { encryption: @result,
       key: @key,
       date: @date
     }
