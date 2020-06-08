@@ -8,6 +8,10 @@ class Offset
     @offest_numbers_hash = generate_offset_numbers
   end
 
+  def square_offset_numbers
+    (@offset_numbers.to_i**2).to_s.slice(-4..-1)
+  end
+
   def generate_offset_numbers
     offset = Hash.new(0)
     offset[:A] = offset_numbers[0]

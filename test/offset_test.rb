@@ -7,6 +7,12 @@ class OffsetTest < Minitest::Test
     assert_instance_of Offset, offset
   end
 
+  def test_it_has_attributes
+    offset = Offset.new('040895')
+
+    assert_equal '040895', offset.offset_numbers
+  end
+
   def test_it_can_find_todays_date
     date = Date.today.strftime("%d%m%y")
     offset = Offset.new
@@ -19,7 +25,10 @@ class OffsetTest < Minitest::Test
     offset = Offset.new
     last_4_digits_of_squared_date = (date.to_i ** 2).to_s.slice(-4..-1)
 
+    offset2 = Offset.new('040895')
+
     assert_equal last_4_digits_of_squared_date, offset.date_squared
+    assert_equal "1025", offset2.square_offset_numbers
   end
 
   def test_it_can_generate_offset_numbers
