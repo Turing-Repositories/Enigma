@@ -14,10 +14,10 @@ class Offset
 
   def generate_offset_numbers
     offset = Hash.new(0)
-    offset[:A] = offset_numbers[0]
-    offset[:B] = offset_numbers[1]
-    offset[:C] = offset_numbers[2]
-    offset[:D] = offset_numbers[3]
+    offset[:A] = square_offset_numbers[0]
+    offset[:B] = square_offset_numbers[1]
+    offset[:C] = square_offset_numbers[2]
+    offset[:D] = square_offset_numbers[3]
     offset
   end
 end
