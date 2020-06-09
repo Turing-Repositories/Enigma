@@ -27,9 +27,10 @@ class Enigma
     encrypter.final_encryption
   end
 
-  def decrypt(message, key, date = todays_date)
+  def decrypt(message, key, date = todays_date) 
     new_key = Key.new(key)
     new_key_set = new_key.generate_key_set_numbers
+
     new_offset = Offset.new(date)
     new_offset_number_set = new_offset.generate_offset_numbers
     Encryption.new(message, key, date)
