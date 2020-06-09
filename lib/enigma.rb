@@ -8,12 +8,11 @@ class Enigma
   include Reuseables
   attr_reader :message
 
-  def initialize(message, key, date = todays_date)
+  def initialize(message, key = random_key_numbers, date = todays_date)
     @message = message
     @key = key
     @date = date
     @offset = offset
-
   end
 
   def encrypt(message, key, date = todays_date)
