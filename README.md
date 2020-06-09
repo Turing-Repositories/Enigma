@@ -1,8 +1,15 @@
 # Enigma
 
+My evaluation:
+Functionality - Below Expectations: I was still unable to get the decrypt cli working properly.
 
+Object Oriented Programming - Meets Expectations: There are definitely many things I still need to work on. However, I felt that my classes were broken down well enough to follow the SRP, with the exception of my module which I would have loved to refactor. My classes are all near the same size, not too long or too short.
 
+Ruby Conventions and Mechanics - Meets Expectations: I implemented multiple hashes and was able to keep my code uniform for the most part. Many of the enumerables used were thought out and chosen specifically for the task at hand.
 
+TDD - Meets Expectations: I made sure to test everything I could so that I could see that sweet 100% coverage when raking. I could always use improvement on committing more often, but felt as this project was a clear improvement over previous ones.  
+
+Version Control - Somewhere in the middle of Meets Expectations and Below. I had a few git fires that really through off my version control flow. I was trying really hard to make sure my commits were not multiple chunks of functionality, however after using a git rest soft head, expecting it to just undo my last commit when I accidentally hit tab complete and it committed a bunch of changes at once, it messed everything up. I learned a very important lesson. Just because you can commit in chunks of functionality doesn't mean you should. It is much better coding etiquette to just commit when you add something you know you will need. It is okay if you change it or remove it completely, what is important is that you add that snapshot of your code even if it is not working. You can always change things, and this is one of the biggest lessons this project taught me.  
 
 
 #### Thoughts
@@ -71,7 +78,26 @@
 - Thinking that the shift and alphabet methods could be put in a module at some point.
 
 - Created a reuseables module.
-- Refactored all classes accordingly
-- Working on getting enigma class finished
-- Fix bug with date not populating correctly
-- Work on bug to get message working
+- Refactored all classes accordingly.
+- Working on getting enigma class finished.
+- Fix bug with date not populating correctly.
+- Work on bug to get message working.
+
+##### **6/8/2020**
+- Fixed bugs that were preventing me from passing the enigma tests.
+- Started CLI implementation.
+- Quickly ran into an error
+- ```No such file or directory @ rb_sysopen - message.txt (Errno::ENOENT)```
+- After hours of searching was able to find a work around.
+- Was able to get encrpyt.rb cli to run successfully
+- Work on decrpyt.rb cli
+- Unable to get it to work properly. Thinking my key is being populated with a different number than I want.
+
+##### **6/9/2020**
+- Changed all the file names for the encrypt and decrypt classes so that they didnt not clash with the new cli implementation.
+- Had to revisit the path bug and fix it again.
+- Deleted all the unneeded code and code that was commented out.
+- Deleted the duplicate files and folders.
+- Work on decrpyt.rb cli as it is still not working successfully.
+- Checked coverage, 100% still.
+- Merged all for evaluation.
