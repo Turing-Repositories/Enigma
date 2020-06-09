@@ -7,6 +7,6 @@ require 'mocha/minitest'
 require "./lib/enigma"
 require "./lib/key"
 require "./lib/offset"
-require "./lib/encrypt"
-require "./lib/decrypt"
+require "./lib/encryption"
+require "./lib/decryption"
 require 'date'

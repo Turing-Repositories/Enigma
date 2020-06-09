@@ -34,11 +34,7 @@ class OffsetTest < Minitest::Test
   def test_it_can_generate_offset_numbers
     offset = Offset.new('040895')
     offset.square_offset_numbers
-
-    #date = Date.today.strftime("%d%m%y")
-    #last_4_digits_of_squared_date = (date.to_i ** 2).to_s.slice(-4..-1)
-    #numbers = last_4_digits_of_squared_date
-
+    
     expected = {
       :A => '1',
       :B => '0',
