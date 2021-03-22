@@ -1,6 +1,6 @@
 # Enigma
 
-My evaluation:
+Personal evaluation:
 Functionality - Below Expectations: I was still unable to get the decrypt cli working properly.
 
 Object Oriented Programming - Meets Expectations: There are definitely many things I still need to work on. However, I felt that my classes were broken down well enough to follow the SRP, with the exception of my module which I would have loved to refactor. My classes are all near the same size, not too long or too short.
